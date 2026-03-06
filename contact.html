@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Peko Peko Japanese</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">Peko Peko <span>Japanese</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="lessons.html">Lessons</a></li>
+        <li><a href="youtube.html">YouTube</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <h1>Contact Me</h1>
+    <p>Have a question? I'd love to hear from you!</p>
+  </section>
+
+  <!-- Contact Section -->
+  <div class="section">
+    <div class="contact-grid">
+
+      <!-- Contact Form -->
+      <div>
+        <h2 style="text-align: left; margin-bottom: 25px;">Send a Message</h2>
+        <!--
+          To make this form work, sign up for free at https://formspree.io
+          Then replace YOUR_FORM_ID below with your actual Formspree form ID.
+        -->
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your name">
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" required placeholder="your@email.com">
+          </div>
+          <div class="form-group">
+            <label for="subject">What's this about?</label>
+            <select id="subject" name="subject">
+              <option value="general">General Question</option>
+              <option value="lessons">About Lessons</option>
+              <option value="collaboration">Collaboration</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" required placeholder="Write your message here..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <h3>Other Ways to Reach Me</h3>
+        <p>Whether you want to book a lesson, ask a question, or just say hi, I'm happy to connect with you!</p>
+
+        <h3>Book a Lesson</h3>
+        <p>The easiest way to start learning is to book a trial lesson on Preply. Click the button below to see my availability and pricing.</p>
+        <a href="https://preply.in/%E7%8E%96%E5%AE%9F6JA1728223210?ts=17727750" target="_blank" class="btn btn-primary" style="margin-bottom: 30px;">Book on Preply</a>
+
+        <h3>Follow Me</h3>
+        <p>Stay updated with new lessons, tips, and Japanese learning content.</p>
+        <div class="social-links">
+          <a href="https://www.youtube.com/@pekopeko_japanese" target="_blank">YouTube</a>
+          <a href="https://preply.in/%E7%8E%96%E5%AE%9F6JA1728223210?ts=17727750" target="_blank">Preply</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner">
+    <h2>Let's Start Learning Together</h2>
+    <p>Book your first lesson today and take the first step on your Japanese journey.</p>
+    <a href="https://preply.in/%E7%8E%96%E5%AE%9F6JA1728223210?ts=17727750" target="_blank" class="btn">Book a Free Trial</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="lessons.html">Lessons</a></li>
+        <li><a href="youtube.html">YouTube</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <p>&copy; 2026 Peko Peko Japanese. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('open');
+    }
+  </script>
+
+</body>
+</html>

@@ -470,9 +470,46 @@ img {
   color: #E8A0BF;
 }
 
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-social a {
+  color: #ccc;
+  font-size: 0.85rem;
+  padding: 6px 16px;
+  border: 1px solid #555;
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+
+.footer-social a:hover {
+  color: #fff;
+  border-color: #E8A0BF;
+  background-color: rgba(232, 160, 191, 0.2);
+}
+
 .footer p {
   font-size: 0.9rem;
   color: #999;
+}
+
+/* ===== Nav Support Button ===== */
+.nav-support {
+  color: #D4789C !important;
+  border: 2px solid #E8A0BF;
+  padding: 5px 15px !important;
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+
+.nav-support:hover {
+  background-color: #E8A0BF;
+  color: #fff !important;
 }
 
 /* ===== Highlights / Features ===== */

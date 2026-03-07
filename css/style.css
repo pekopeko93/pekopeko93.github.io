@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lora:wght@400;500;600&display=swap');
 
 /* ===== Reset & Base ===== */
 *, *::before, *::after {
@@ -12,10 +12,15 @@ html {
 }
 
 body {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Lora', serif;
   color: #333;
   background-color: #FFF8F0;
-  line-height: 1.7;
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+h1, h2, h3 {
+  font-family: 'Cormorant Garamond', serif;
 }
 
 a {
@@ -53,8 +58,9 @@ img {
 }
 
 .nav-logo {
-  font-size: 1.5rem;
-  font-weight: 800;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.7rem;
+  font-weight: 700;
   color: #D4789C;
 }
 
@@ -70,8 +76,9 @@ img {
 
 .nav-links a {
   color: #555;
-  font-weight: 600;
-  font-size: 0.95rem;
+  font-weight: 500;
+  font-size: 0.88rem;
+  letter-spacing: 0.3px;
   padding: 5px 0;
   position: relative;
 }
@@ -121,22 +128,24 @@ img {
 }
 
 .hero h1 {
-  font-size: 2.8rem;
-  font-weight: 800;
+  font-size: 3.5rem;
+  font-weight: 700;
   color: #333;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  letter-spacing: -0.5px;
 }
 
 .hero .tagline {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   color: #777;
   margin-bottom: 30px;
+  font-style: italic;
 }
 
 .hero p {
   max-width: 600px;
   margin: 0 auto 35px;
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   color: #555;
 }
 
@@ -193,17 +202,19 @@ img {
 }
 
 .section h2 {
-  font-size: 2rem;
+  font-size: 2.4rem;
   text-align: center;
   margin-bottom: 15px;
   color: #333;
+  font-weight: 600;
 }
 
 .section .subtitle {
   text-align: center;
-  color: #777;
+  color: #999;
   margin-bottom: 50px;
-  font-size: 1.05rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
 }
 
 /* ===== Page Header ===== */
@@ -214,15 +225,17 @@ img {
 }
 
 .page-header h1 {
-  font-size: 2.4rem;
-  font-weight: 800;
+  font-size: 3rem;
+  font-weight: 700;
   color: #333;
   margin-bottom: 10px;
+  letter-spacing: -0.5px;
 }
 
 .page-header p {
-  color: #777;
-  font-size: 1.1rem;
+  color: #999;
+  font-size: 0.9rem;
+  font-style: italic;
 }
 
 /* ===== Cards ===== */
@@ -246,7 +259,7 @@ img {
 }
 
 .card h3 {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   margin-bottom: 12px;
   color: #D4789C;
 }
@@ -254,6 +267,7 @@ img {
 .card p {
   color: #666;
   margin-bottom: 15px;
+  font-size: 0.9rem;
 }
 
 .card .tag {
@@ -386,8 +400,8 @@ img {
   padding: 12px 16px;
   border: 2px solid #E8D5DC;
   border-radius: 10px;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1rem;
+  font-family: 'Lora', serif;
+  font-size: 0.9rem;
   color: #333;
   background: #fff;
   transition: border-color 0.3s;
@@ -539,14 +553,14 @@ img {
 }
 
 .feature-item h3 {
-  font-size: 1.15rem;
+  font-size: 1.4rem;
   margin-bottom: 10px;
   color: #333;
 }
 
 .feature-item p {
   color: #777;
-  font-size: 0.95rem;
+  font-size: 0.88rem;
 }
 
 /* ===== CTA Banner ===== */
@@ -558,12 +572,13 @@ img {
 }
 
 .cta-banner h2 {
-  font-size: 2rem;
+  font-size: 2.4rem;
   margin-bottom: 15px;
+  font-weight: 600;
 }
 
 .cta-banner p {
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   margin-bottom: 30px;
   opacity: 0.9;
 }
@@ -600,6 +615,80 @@ img {
   margin-bottom: 20px;
 }
 
+/* ===== Script Cards (scripts.html) ===== */
+.script-card {
+  display: block;
+  color: inherit;
+  cursor: pointer;
+}
+
+.script-card:hover {
+  color: inherit;
+}
+
+.script-link {
+  display: inline-block;
+  color: #D4789C;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+/* ===== Script Page (individual episodes) ===== */
+.script-page {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.script-video {
+  margin-bottom: 40px;
+}
+
+.script-video .video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+.script-video .video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.script-text {
+  background: #fff;
+  border-radius: 15px;
+  padding: 40px 35px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+
+.script-text h2 {
+  text-align: left;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: #D4789C;
+}
+
+.script-text p {
+  color: #444;
+  font-size: 1rem;
+  line-height: 2;
+  margin-bottom: 20px;
+}
+
+.script-back {
+  text-align: center;
+  margin-top: 10px;
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
   .hamburger {
@@ -624,11 +713,15 @@ img {
   }
 
   .hero h1 {
-    font-size: 2rem;
+    font-size: 2.4rem;
   }
 
   .hero .tagline {
-    font-size: 1.05rem;
+    font-size: 0.95rem;
+  }
+
+  .page-header h1 {
+    font-size: 2.2rem;
   }
 
   .features {

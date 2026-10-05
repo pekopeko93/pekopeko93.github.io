@@ -331,6 +331,64 @@ img {
   left: 0;
 }
 
+/* ===== About Page：あいさつ・数字・ボタン ===== */
+.about-hello {
+  color: #D4789C !important;
+  font-size: 1.1rem;
+  margin-bottom: 0 !important;
+}
+
+.about-title {
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.stats-strip {
+  max-width: 1100px;
+  margin: 0 auto 70px;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.stat {
+  background: #fff;
+  border-radius: 15px;
+  padding: 25px 15px;
+  text-align: center;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+  border-top: 3px solid #E8A0BF;
+}
+
+.stat-num {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #D4789C;
+  line-height: 1.1;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.pillar {
+  text-align: center;
+}
+
 /* ===== Video Grid ===== */
 .video-grid {
   display: grid;
@@ -524,6 +582,23 @@ img {
 .nav-support:hover {
   background-color: #E8A0BF;
   color: #fff !important;
+}
+
+/* ===== Nav Book Button（予約ボタン：メニューの中で一番目立たせる） ===== */
+.nav-book {
+  background-color: #D4789C;
+  color: #fff !important;
+  padding: 7px 18px !important;
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+
+.nav-book::after {
+  display: none;
+}
+
+.nav-book:hover {
+  background-color: #B85C80;
 }
 
 /* ===== Highlights / Features ===== */
@@ -733,8 +808,24 @@ img {
     grid-template-columns: 1fr;
   }
 
-  .about-photo {
-    height: 250px;
+  .about-title {
+    font-size: 2.2rem;
+  }
+
+  .stats-strip {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .about-photo img {
+    height: 320px;
+    object-position: center 40%;
+  }
+
+  /* スマホでカードが画面の端にくっつかないように */
+  .section-alt .section {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .contact-grid {

@@ -270,7 +270,8 @@ img {
   font-size: 0.9rem;
 }
 
-.card .tag {
+.card .tag,
+.price-card .tag {
   display: inline-block;
   background-color: #FFE4E6;
   color: #D4789C;
@@ -387,6 +388,98 @@ img {
 
 .pillar {
   text-align: center;
+}
+
+/* ===== Lessons Page：料金カード ===== */
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 340px));
+  justify-content: center;
+  gap: 30px;
+}
+
+.price-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 35px 30px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.price-card-main {
+  border: 2px solid #E8A0BF;
+}
+
+.price-card h3 {
+  font-size: 1.6rem;
+  margin-top: 12px;
+}
+
+.price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #D4789C;
+  line-height: 1.1;
+}
+
+.price-length {
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.price-card .philosophy-list {
+  text-align: left;
+  margin-bottom: 25px;
+  flex-grow: 1;
+}
+
+.price-note {
+  text-align: center;
+  color: #777;
+  margin-top: 30px;
+}
+
+/* ===== Lessons Page：受講の流れ ===== */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.step {
+  background: #fff;
+  border-radius: 15px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+}
+
+.step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #E8A0BF;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.step h3 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.step p {
+  color: #777;
+  font-size: 0.88rem;
 }
 
 /* ===== Video Grid ===== */
@@ -815,6 +908,11 @@ img {
   .stats-strip {
     grid-template-columns: 1fr;
     gap: 12px;
+  }
+
+  .price-grid,
+  .steps {
+    grid-template-columns: 1fr;
   }
 
   .about-photo img {

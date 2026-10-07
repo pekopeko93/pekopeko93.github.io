@@ -443,6 +443,14 @@ img {
   margin-top: 30px;
 }
 
+.price-card-note {
+  color: #D4789C;
+  font-size: 0.9rem;
+  background: #FFF8F0;
+  border-radius: 12px;
+  padding: 12px 15px;
+}
+
 /* ===== Lessons Page：受講の流れ ===== */
 .steps {
   display: grid;
@@ -480,6 +488,12 @@ img {
 .step p {
   color: #777;
   font-size: 0.88rem;
+}
+
+.steps-after {
+  text-align: center;
+  color: #555;
+  margin-top: 30px;
 }
 
 /* ===== Video Grid ===== */

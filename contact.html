@@ -43,11 +43,8 @@
       <!-- Contact Form -->
       <div>
         <h2 style="text-align: left; margin-bottom: 25px;">Send a Message</h2>
-        <!--
-          To make this form work, sign up for free at https://formspree.io
-          Then replace YOUR_FORM_ID below with your actual Formspree form ID.
-        -->
-        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <!-- 送信されたメッセージは Formspree 経由で kumi さんのメールに届く -->
+        <form id="contactForm" action="https://formspree.io/f/xzeddqeb" method="POST">
           <div class="form-group">
             <label for="name">Your Name</label>
             <input type="text" id="name" name="name" required placeholder="Enter your name">
@@ -71,6 +68,7 @@
             <textarea id="message" name="message" required placeholder="Write your message here..."></textarea>
           </div>
           <button type="submit" class="btn btn-primary">Send Message</button>
+          <p class="form-status" id="formStatus" role="status"></p>
         </form>
       </div>
 
@@ -129,6 +127,35 @@
   </footer>
 
   <script>
+    // フォームを送ったら、ページを移動せずに「送信できました」と表示する
+    const contactForm = document.getElementById('contactForm');
+    const formStatus = document.getElementById('formStatus');
+
+    contactForm.addEventListener('submit', async function (event) {
+      event.preventDefault();
+      const button = contactForm.querySelector('button');
+      button.disabled = true;
+      formStatus.textContent = 'Sending...';
+      formStatus.className = 'form-status';
+
+      try {
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          body: new FormData(contactForm),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (!response.ok) throw new Error('Send failed');
+        contactForm.reset();
+        formStatus.textContent = 'Thank you! Your message has been sent. I\'ll get back to you soon 🌸';
+        formStatus.classList.add('success');
+      } catch (error) {
+        formStatus.textContent = 'Sorry, something went wrong. Please try again, or message me on Instagram.';
+        formStatus.classList.add('error');
+      } finally {
+        button.disabled = false;
+      }
+    });
+
     function toggleMenu() {
       document.getElementById('navLinks').classList.toggle('open');
     }

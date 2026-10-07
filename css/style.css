@@ -619,6 +619,19 @@ img {
   color: #fff;
 }
 
+.form-status {
+  margin-top: 15px;
+  font-size: 0.95rem;
+}
+
+.form-status.success {
+  color: #4a9b6e;
+}
+
+.form-status.error {
+  color: #c0392b;
+}
+
 /* ===== Footer ===== */
 .footer {
   background-color: #333;
